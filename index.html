@@ -2,66 +2,93 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Dunia Nugget Untukmu 🍗🌍</title>
+  <title>Petualangan Dunia Nugget 🍗</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive;
-      background: #fff8e1;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff3e0;
       text-align: center;
-      padding: 30px;
+      padding: 40px;
     }
     h1 {
-      color: #ff6f00;
+      color: #e65100;
     }
-    .nugget {
-      display: none;
-      margin: 20px auto;
-    }
-    .nugget img {
-      width: 250px;
+    .scene img {
+      width: 260px;
       border-radius: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .btn {
-      padding: 14px 26px;
+      padding: 12px 24px;
       font-size: 18px;
       background: #ff9800;
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
-      margin-top: 30px;
+      margin: 10px;
+    }
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>🥔 Selamat Datang di Dunia Nugget! 🥔</h1>
-  <p>Setiap klik, kamu akan menemukan keajaiban nugget yang belum pernah kamu lihat! 😋</p>
+  <h1>🚀 Selamat Datang di Petualangan Dunia Nugget!</h1>
+  <p>Kamu adalah penjelajah nugget. Pilih ke mana kamu mau pergi!</p>
 
-  <div class="nugget"><img src="https://i.imgur.com/Yjdd9eN.jpg" alt="Gunung Nugget"><p>⛰️ Gunung Nugget</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/1TtG8tI.jpg" alt="Lautan Nugget"><p>🌊 Lautan Nugget</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/rFT7cCE.jpg" alt="Nugget Terbang"><p>☁️ Nugget Terbang</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/5tZVGcC.jpg" alt="Istana Nugget"><p>🏰 Istana Nugget</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/ePK4FtP.jpg" alt="Planet Nugget"><p>🪐 Planet Nugget</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/zM21qMg.jpg" alt="Nugget Raksasa"><p>😴 Nugget Raksasa Tidur</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/fO3UB9v.jpg" alt="Hujan Nugget"><p>🌧️ Hujan Nugget</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/QNqIk4b.jpg" alt="Nugget Hati"><p>💛 Nugget Berbentuk Hati</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/hhW9x5R.jpg" alt="UFO Nugget"><p>👽 Nugget UFO</p></div>
-  <div class="nugget"><img src="https://i.imgur.com/ax0HTuj.jpg" alt="Kereta Nugget"><p>🚂 Kereta Nugget Ekspres</p></div>
+  <div class="scene" id="start">
+    <img src="https://i.imgur.com/ePK4FtP.jpg" alt="Planet Nugget">
+    <p>Kamu tiba di pintu masuk Dunia Nugget. Ke mana kamu mau pergi?</p>
+    <button class="btn" onclick="goTo('gunung')">⛰️ Ke Gunung Nugget</button>
+    <button class="btn" onclick="goTo('planet')">🪐 Naik Roket ke Planet Nugget</button>
+  </div>
 
-  <button class="btn" onclick="showNext()">🍗 Jelajahi Nugget Berikutnya!</button>
+  <div class="scene hidden" id="gunung">
+    <img src="https://i.imgur.com/Yjdd9eN.jpg" alt="Gunung Nugget">
+    <p>Kamu mendaki Gunung Nugget yang tinggi. Tapi tiba-tiba... muncul Nugget Raksasa! 😱</p>
+    <button class="btn" onclick="goTo('tidur')">😴 Ajak dia tidur</button>
+    <button class="btn" onclick="goTo('lari')">🏃‍♀️ Lari sejauh mungkin</button>
+  </div>
+
+  <div class="scene hidden" id="planet">
+    <img src="https://i.imgur.com/ePK4FtP.jpg" alt="Planet Nugget">
+    <p>Kamu mendarat di Planet Nugget! Di sana ada Istana Nugget & UFO Nugget terbang di atas langit.</p>
+    <button class="btn" onclick="goTo('istana')">🏰 Masuk ke Istana</button>
+    <button class="btn" onclick="goTo('ufo')">👽 Coba naik UFO</button>
+  </div>
+
+  <div class="scene hidden" id="tidur">
+    <img src="https://i.imgur.com/zM21qMg.jpg" alt="Nugget Tidur">
+    <p>Nugget Raksasa tertidur dan kamu bisa selfie di atas kepalanya 😆</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
+  </div>
+
+  <div class="scene hidden" id="lari">
+    <img src="https://i.imgur.com/fO3UB9v.jpg" alt="Hujan Nugget">
+    <p>Kamu lari ke bawah gunung, tapi malah kena hujan nugget! 🌧️</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
+  </div>
+
+  <div class="scene hidden" id="istana">
+    <img src="https://i.imgur.com/5tZVGcC.jpg" alt="Istana Nugget">
+    <p>Kamu jadi Raja Nugget! 🎉 Semua nugget di planet ini menyambutmu!</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
+  </div>
+
+  <div class="scene hidden" id="ufo">
+    <img src="https://i.imgur.com/hhW9x5R.jpg" alt="UFO Nugget">
+    <p>Kamu naik UFO dan terbang ke Galaksi Nugget Lain... petualangan baru menantimu 👾</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
+  </div>
 
   <script>
-    let current = 0;
-    const nuggets = document.querySelectorAll('.nugget');
-
-    function showNext() {
-      if (current < nuggets.length) {
-        nuggets[current].style.display = 'block';
-        current++;
-      } else {
-        alert("🎉 Kamu telah menjelajahi seluruh Dunia Nugget! Sampai jumpa di petualangan berikutnya 😄");
-      }
+    function goTo(id) {
+      document.querySelectorAll('.scene').forEach(scene => scene.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function restart() {
+      goTo('start');
     }
   </script>
 </body>
