@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hadiah Makanan Untukmu 🍱</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff8e1;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #d84315;
+    }
+    .food {
+      display: none;
+      margin: 20px;
+    }
+    .food img {
+      width: 200px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      background: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Untukmu, Temanku Tercinta 🍽️</h1>
+  <p>Ini adalah koleksi makanan favorit yang ingin aku bagi ke kamu!</p>
+
+  <div class="food" id="food1">
+    <img src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="Nasi Goreng">
+    <p>Nasi Goreng Spesial 🥘</p>
+  </div>
+
+  <div class="food" id="food2">
+    <img src="https://www.themealdb.com/images/media/meals/1529444830.jpg" alt="Sushi">
+    <p>Sushi Segar 🍣</p>
+  </div>
+
+  <div class="food" id="food3">
+    <img src="https://www.themealdb.com/images/media/meals/wrpwuu1511786491.jpg" alt="Mie Ramen">
+    <p>Mie Ramen Pedas 🍜</p>
+  </div>
+
+  <button class="btn" onclick="showNext()">🍽️ Lihat Makanan Berikutnya</button>
+
+  <script>
+    let current = 0;
+    const foods = document.querySelectorAll('.food');
+
+    function showNext() {
+      if (current < foods.length) {
+        foods[current].style.display = 'block';
+        current++;
+      } else {
+        alert("Semua makanan sudah dibuka! 🍰 Terima kasih sudah melihat~");
+      }
+    }
+  </script>
+</body>
+</html>
