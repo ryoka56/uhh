@@ -6,20 +6,17 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fff8e1;
+      background: #fff3e0;
       text-align: center;
       padding: 40px;
     }
     h1 {
       color: #e65100;
     }
-    .scene {
-      display: none;
-      margin: 30px auto;
-    }
-    .emoji {
-      font-size: 80px;
-      margin: 20px 0;
+    .scene img {
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .btn {
       padding: 12px 24px;
@@ -31,64 +28,64 @@
       cursor: pointer;
       margin: 10px;
     }
-    .visible {
-      display: block;
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>🚀 Petualangan Dunia Nugget 🍗</h1>
-  <p>Kamu siap menjelajahi dunia penuh misteri... dan nugget!</p>
+  <h1>🚀 Selamat Datang di Petualangan Dunia Nugget!</h1>
+  <p>Kamu adalah penjelajah nugget. Pilih ke mana kamu mau pergi!</p>
 
-  <div class="scene visible" id="start">
-    <div class="emoji">🍗🌍</div>
-    <p>Kamu berada di gerbang Dunia Nugget. Ke mana mau pergi?</p>
-    <button class="btn" onclick="goTo('gunung')">⛰️ Gunung Nugget</button>
-    <button class="btn" onclick="goTo('planet')">🪐 Planet Nugget</button>
+  <div class="scene" id="start">
+    <img src="https://lh3.googleusercontent.com/fife/ALs6j_EGLUjsj6r2TdnUPy17P629XljC9eymR_wdBoJwqgEp7goESa_64JAQVGr4A9q7mUIeQkVOzdvsaZCvEKWW3SZ9oPyzb9dYAvsrj3XBp9yeL3o7f_cR6sWyXzoE4u_aJSxXS9Po2oEF4SQ_IAInL65_NW69XkcxJyZAQ6uOoKLCL9wrHo1GaSghax4XXwZ4vwjSuOjozAhO1c35jcmlfRFTTcKcyapUFFmUL4YC00BB1jX7l2CuMDxZkF5p9i-TGJCIwqqGKM7aBZ-LDXzzqTltM2glN_Br4Vw4jGei0o2e0w9thnfF7Z2bw0dWURP-Qn9JEps6yBjstHit5EyAhjLXQFxvHLUAsj678KwczPnnTvMEt35qBUUUqB50UcDCGWSTpspam6wWTfsMqBlL0Z23pn5PddVgliYavDvNOlGe0m9fBGggfN57o0wTpJg50RqmfaTkFFkOyIQih5VIgu6m5o8PFhSvfdujzZGynqErZd-urgH1ugegOVw1rgE2NJglAx9q2CVQFqHiXxOBiifJ7qiI85s0XvVylyGv2AigFo_h5omwoqnglVDGht0aTpFnGPRfEhtVrrMZHGlX0NoTH0N3jNbhkP2bNpCmTiCuIisD0aiMK5-rZIA8bNJ6Zwk4hnpnnUqQ4nie-ZgTLkFrk978bosOKCAylg-qzNZHfQFrO5vk7NjMFABD2y2ZcgzDPClNoTsx_6egmVGmp2WadLOktJAbGGKaNX-Zj0pS54go0nCELNRlRIsUndPFJvmDFAVg90uRykTqihK_MiLjKGjvfpGc-AG9TE4jLzJoiE8ERCdeNnGsaiMUDFB9nbHuSlCYthdjH0vVtAo74UxFWUS5_GroEdxwPXlnP2Aq3FkjwEovcr1-UecaVbCyyX5AJCp5ZVwZVo2gceiRDJ_x9NLzSnk9ULL9ZweY6sCbjnK5PAnfVnD7eq4wvnU9hZbkT5C-MawFaCvMg4LGuDX8PCjy7bU37foQE2I2WakxpZzhlBBGNbpJ8Z-NrfbUbWNJtTgJI44sYLcA9HGgFPjjFjhvH-YxJO2l8iLLsZrVmtVKwDyqbBsDjclbgR6AnnYnQjd86FKHgVq3AIagd2D6V7NYhASmBKImg0JQx5CsD_0-PMQol4UK9IhDq_cMIsDbQk-2n5mSDSCEvQJlT947GO_LlRnYW8T1jQ_9eIyDzKIPyvOoz88DiwHOzekoq62J3eRLJMnZQfLmg4yzEcEEsGsx6mFVMovXfG5WFLy2gR7u18TU30GkWQGtMzujL8SwBUhJKzcCy1wrUjbkhhALDK1COhF1odnWc5vTQlOn80A_dXLanhBnmjjrpoVVPyD3Y7bvLE2uX_XzscZ0mYdHbE4YxvR8pm4529nvnMYjygx9FRZPtBsQ8tH80vO6ZwyaUZnC5NcfrkhXem6Qq4P2C6r6hZ_LhviARG11787OaT4WTJiD9zckcXIUjg0P0l659JX0JuNL0vxbBAjKran1XnozlQ=s1024" alt="Planet Nugget">
+    <p>Kamu tiba di pintu masuk Dunia Nugget. Ke mana kamu mau pergi?</p>
+    <button class="btn" onclick="goTo('gunung')">⛰️ Ke Gunung Nugget</button>
+    <button class="btn" onclick="goTo('planet')">🪐 Naik Roket ke Planet Nugget</button>
   </div>
 
-  <div class="scene" id="gunung">
-    <div class="emoji">⛰️🍗😱</div>
-    <p>Di Gunung Nugget, seekor Nugget Raksasa muncul dari balik batu!</p>
-    <button class="btn" onclick="goTo('tidur')">😴 Ajak tidur</button>
-    <button class="btn" onclick="goTo('lari')">🏃‍♀️ Kabur!</button>
+  <div class="scene hidden" id="gunung">
+    <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KSH87Bz22Gvu2Yo39OqVfDy_9Fam2CcRlkSRRqNFc1Bh_ARN54aeY2ftzRPOV1lYjGw5Q4DiO0X6l2iNQ5SP5f_6q3XZG-CSmjSy02sQO-r_v35NV1KtpR-_rlnCS3SFpF0W4bptBrhqkSGPaos_JZsC4lkNao91DVNQE1EdPwCSS2icQ=s1024" alt="Gunung Nugget">
+    <p>Kamu mendaki Gunung Nugget yang tinggi. Tapi tiba-tiba... muncul Nugget Raksasa! 😱</p>
+    <button class="btn" onclick="goTo('tidur')">😴 Ajak dia tidur</button>
+    <button class="btn" onclick="goTo('lari')">🏃‍♀️ Lari sejauh mungkin</button>
   </div>
 
-  <div class="scene" id="planet">
-    <div class="emoji">🛸🏰🍗</div>
-    <p>Di Planet Nugget, kamu lihat UFO dan Istana Nugget. Pilih jalanmu:</p>
-    <button class="btn" onclick="goTo('istana')">🏰 Masuk Istana</button>
-    <button class="btn" onclick="goTo('ufo')">👽 Naik UFO</button>
+  <div class="scene hidden" id="planet">
+    <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KT_wkjcap4CmJGspxvoLJXOSbwvYSLXPJI-limHRHT2ibQCS4xBIzZrxfxXGuLerGitbkPh8iFYZn0by0aHjIN3NdplMdkum5CwYrKhVpiDVsVo-g2UvAVrGlOvUyxx_grVHTb2VqPNkSl0sP_O1toPlDFYFM_2m_rFksHmAWfK8irlMw=s1024" alt="Planet Nugget">
+    <p>Kamu mendarat di Planet Nugget! Di sana ada Istana Nugget & UFO Nugget terbang di atas langit.</p>
+    <button class="btn" onclick="goTo('istana')">🏰 Masuk ke Istana</button>
+    <button class="btn" onclick="goTo('ufo')">👽 Coba naik UFO</button>
   </div>
 
-  <div class="scene" id="tidur">
-    <div class="emoji">🍗💤</div>
-    <p>Nugget Raksasa tertidur! Kamu berfoto selfie sambil duduk di bahunya 😆</p>
-    <button class="btn" onclick="restart()">🔁 Main Lagi</button>
+  <div class="scene hidden" id="tidur">
+    <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KRZchkQdi2xZx5jHR-5zu5-K4I6n1hY7KO0TM7ihtWQ7OTUzhMkf1xCaXf1W_RBXQKKP83OuGwPMsj_ZROAua19GUGTJiBAaHcaivr48l5jBujwm08a9d4oSPSUmICnmWc3Quu-eeE2-zaUWZg0JUD-XU0EpqBREale-Sru-xMqLRcQtw=s1024" alt="Nugget Tidur">
+    <p>Nugget Raksasa tertidur dan kamu bisa selfie di atas kepalanya 😆</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
   </div>
 
-  <div class="scene" id="lari">
-    <div class="emoji">🌧️🍗🍗</div>
-    <p>Kamu lari tapi malah kena hujan nugget! Tapi enak juga sih 😋</p>
-    <button class="btn" onclick="restart()">🔁 Main Lagi</button>
+  <div class="scene hidden" id="lari">
+    <img src="https://lh3.googleusercontent.com/gg-dl/AJfQ9KQDmDwJd_mBCbX8tzPITWDv81MHTmy-tKKHTC-JurLQyz81vZMxrzJKMfWTvYLUB-eH2mxzCH2F3DfC4XOwNMvAoCmgq5qYxP135q5GbLfsKvwIV78WJ9YhqeAOlfBWsK6B4d-CGfjCd_2f0sfbL_dT74Gcsw50S6e1boZfHN2OFGNaDQ=s1024" alt="Hujan Nugget">
+    <p>Kamu lari ke bawah gunung, tapi malah kena hujan nugget! 🌧️</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
   </div>
 
-  <div class="scene" id="istana">
-    <div class="emoji">👑🍗🎉</div>
-    <p>Kamu jadi Raja Nugget! Semua nugget memberi hormat 🙇‍♂️</p>
-    <button class="btn" onclick="restart()">🔁 Main Lagi</button>
+  <div class="scene hidden" id="istana">
+    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-b2ac-61f7-998f-e7080ed73083/raw?se=2025-06-08T22%3A33%3A32Z&sp=r&sv=2024-08-04&sr=b&scid=84621459-c7dc-58e2-bc74-363ddc8791fc&skoid=24a7dec3-38fc-4904-b888-8abe0855c442&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-08T10%3A07%3A49Z&ske=2025-06-09T10%3A07%3A49Z&sks=b&skv=2024-08-04&sig=T9%2BrjHDJOvy41X%2BwXRzuQ92V9HCYKIZaq%2BVF13JwPdg%3D">
+    <p>Kamu jadi Raja Nugget! 🎉 Semua nugget di planet ini menyambutmu!</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
   </div>
 
-  <div class="scene" id="ufo">
-    <div class="emoji">🛸🌌🍗</div>
-    <p>UFO membawamu ke galaksi nugget yang baru. Petualangan belum selesai!</p>
-    <button class="btn" onclick="restart()">🔁 Main Lagi</button>
+  <div class="scene hidden" id="ufo">
+    <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-3d58-61f7-9ee9-22709f327f0d/raw?se=2025-06-08T22%3A50%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=99726aff-fd75-5e55-9ef7-d7825d645aac&skoid=24a7dec3-38fc-4904-b888-8abe0855c442&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-08T00%3A14%3A50Z&ske=2025-06-09T00%3A14%3A50Z&sks=b&skv=2024-08-04&sig=NRonfK9HSYDwxF58QO12vXeYhXqMQy6j5TV0DOoev2g%3D" alt="UFO Nugget">
+    <p>Kamu naik UFO dan terbang ke Galaksi Nugget Lain... petualangan baru menantimu 👾</p>
+    <button class="btn" onclick="restart()">🔁 Mulai Lagi</button>
   </div>
 
   <script>
     function goTo(id) {
-      document.querySelectorAll('.scene').forEach(scene => scene.classList.remove('visible'));
-      document.getElementById(id).classList.add('visible');
+      document.querySelectorAll('.scene').forEach(scene => scene.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
     }
     function restart() {
       goTo('start');
