@@ -2,58 +2,55 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Hadiah Makanan Untukmu 🍱</title>
+  <title>Hadiah Makanan Nusantara & Jepang</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #fff8e1;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff3e0;
       text-align: center;
       padding: 30px;
     }
     h1 {
-      color: #d84315;
+      color: #e65100;
     }
     .food {
       display: none;
-      margin: 20px;
+      margin: 20px auto;
     }
     .food img {
-      width: 200px;
+      width: 220px;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .btn {
-      padding: 10px 20px;
+      padding: 12px 24px;
       font-size: 18px;
       background: #ff7043;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>🎉 Untukmu, Temanku Tercinta 🍽️</h1>
-  <p>Ini adalah koleksi makanan favorit yang ingin aku bagi ke kamu!</p>
+  <h1>🎁 Makanan Khas Untukmu 🍱</h1>
+  <p>Koleksi makanan khas dari Jepang & Indonesia, untuk kamu yang spesial 😄</p>
 
-  <div class="food" id="food1">
-    <img src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="Nasi Goreng">
-    <p>Nasi Goreng Spesial 🥘</p>
-  </div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/sushi.jpg" alt="Sushi"><p>Sushi 🍣</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/ramen.jpg" alt="Ramen"><p>Ramen 🍜</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/1550441882.jpg" alt="Takoyaki"><p>Takoyaki 🐙</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/onigiri.jpg" alt="Onigiri"><p>Onigiri 🍙</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/tempura.jpg" alt="Tempura"><p>Tempura 🍤</p></div>
 
-  <div class="food" id="food2">
-    <img src="https://www.themealdb.com/images/media/meals/1529444830.jpg" alt="Sushi">
-    <p>Sushi Segar 🍣</p>
-  </div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/nasi-goreng.jpg" alt="Nasi Goreng"><p>Nasi Goreng 🥘</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/rendang.jpg" alt="Rendang"><p>Rendang 🍖</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/sate.jpg" alt="Sate Ayam"><p>Sate Ayam 🍢</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/gado-gado.jpg" alt="Gado-Gado"><p>Gado-Gado 🥗</p></div>
+  <div class="food"><img src="https://www.themealdb.com/images/media/meals/bakso.jpg" alt="Bakso"><p>Bakso 🍲</p></div>
 
-  <div class="food" id="food3">
-    <img src="https://www.themealdb.com/images/media/meals/wrpwuu1511786491.jpg" alt="Mie Ramen">
-    <p>Mie Ramen Pedas 🍜</p>
-  </div>
-
-  <button class="btn" onclick="showNext()">🍽️ Lihat Makanan Berikutnya</button>
+  <button class="btn" onclick="showNext()">🍽️ Buka Makanan Berikutnya</button>
 
   <script>
     let current = 0;
@@ -64,7 +61,7 @@
         foods[current].style.display = 'block';
         current++;
       } else {
-        alert("Semua makanan sudah dibuka! 🍰 Terima kasih sudah melihat~");
+        alert("Yay! Semua makanan sudah kamu lihat 😋 Terima kasih sudah mampir!");
       }
     }
   </script>
